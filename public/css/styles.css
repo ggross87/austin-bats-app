@@ -19,9 +19,6 @@ body {
 }
 
 
-.parallax-container {
-  height: 1000px;
-}
 
 #indexHeader {
   text-shadow: 2px 2px #000;
@@ -36,12 +33,13 @@ body {
 #mainContainer {
   height: 700px;
   width: auto;
-  background-image: url(../images/sunset.png);
+  background-image: url(../images/sunset2.png);
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 75% auto;
+  background-size: 75%;
   background-attachment: fixed;
   background-position: bottom;
+  z-index: 2;
 }
 
 .mainButtons
@@ -84,11 +82,13 @@ body {
 }
 
 .infoContainer {
-  padding: 50px;
+  padding: 20px;
+  /*height: 800px;*/
 }
 
-.aboutCards {
-  width: 100%;
+.viewingCards {
+  width: auto;
+  height: 400px;
 }
 
 .instagramContainer {
@@ -98,7 +98,7 @@ body {
 
 .shopContainer {
   width: 100%;
-  height: 600px;
+  height: 700px;
   padding: 20px;
 }
 
@@ -107,16 +107,17 @@ body {
 }
 
 .donationPannel {
-  height: 500px;
-
-}
-
-.dontaionContainer {
-  width: 75%;
   height: 600px;
 }
+
 .dontationButton {
-  padding-top: 900px;
+  padding-top: 850px;
+}
+
+#donateButton {
+  border-radius: 30px;
+  text-align: center;
+  cursor: pointer;
 }
 
 .conservationImage {
@@ -126,3 +127,33 @@ body {
 #batOrgImage {
     border-radius: 30px;
   }
+
+
+/*SHOP CSS*/
+
+
+/*canvas*/
+
+#canvas {
+  position: relative;
+  z-index: 0;
+}
+
+#mainHeaderText2 {
+  margin-left: 330px;
+  margin-top: 250px;
+  position: absolute;
+  z-index: 1;
+}
+
+#headerSubText2 {
+  position: absolute;
+  z-index: 1;
+  margin-left: 120px;
+  margin-top: 350px;
+}
+
+html,body{
+  margin: 0;
+  padding: 0;
+}
