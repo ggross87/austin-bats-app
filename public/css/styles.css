@@ -126,3 +126,6 @@ body {
 #batOrgImage {
     border-radius: 30px;
   }
+  form.signup, form.login {
+  margin-top: 50px;
+}
