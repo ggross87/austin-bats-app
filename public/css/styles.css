@@ -3,7 +3,16 @@ body {
   background-color: #ffb300;
 }
 
+.weatherTable {
+  background-color: teal;
+}
 
+td {
+  background-color: teal;
+}
+#tempbody {
+  background: orange;
+}
 .headerText {
   color: white;
 }
