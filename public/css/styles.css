@@ -3,10 +3,21 @@ body {
   background-color: #ffb300;
 }
 
+
 h1, h2, h3, h4{
   font-family: 'Didact Gothic', sans-serif;
     text-shadow: .5px .5px #000;
+  }
+
+
+.weatherTable {
+  background-color: teal;
 }
+
+td {
+  background-color: teal;
+}
+
 
 .headerText {
   color: white;
