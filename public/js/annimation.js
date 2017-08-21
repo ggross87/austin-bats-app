@@ -10,7 +10,7 @@ var circles = [],
     maxSize = 2,                                       // the maximum size of the circles in px
     numCircles = 300,                                   // the number of circles
     minSpeed = -2,                                     // the minimum speed, recommended: -maxspeed
-    maxSpeed = 2,                                    // the maximum speed of the circles
+    maxSpeed =3,                                    // the maximum speed of the circles
     expandState = true;                                      // the direction of expansion
 
 function buildArray() {

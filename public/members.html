@@ -8,7 +8,7 @@
   <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
   <link type="text/css" rel="stylesheet" href="css/styles.css">
   <link href="https://cdn.snipcart.com/themes/2.0/base/snipcart.min.css" rel="stylesheet" type="text/css" />
-
+<link href="https://fonts.googleapis.com/css?family=Didact+Gothic" rel="stylesheet">
   <!--Let browser know website is optimized for mobile-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
@@ -23,7 +23,7 @@
           <li><a class="headerText" href="#about">About</a></li>
           <li><a class="headerText" href="#shop">Shop</a></li>
           <li><a class="headerText" href="#instagram">Photos</a></li>
-          <li><a class="headerText" href="#after">Nearby</a></li>
+          <!-- <li><a class="headerText" href="#after">Nearby</a></li> -->
           <li><a class="headerText" href="#donate">Donate</a></li>
           <li><a class="headerText" href="#blog">Blog</a></li>
         </ul>
@@ -34,31 +34,41 @@
     </nav>
   </div>
 
-  <div class="container valign-wrapper" id="mainContainer">
-    <div class="row">
-      <div class="col s12 m12">
-        <h1 class="center-align white-text" id="mainHeaderText">Hello, Bat Lover.</h1>
+  <div class="wrapper" id="mainContainer">
+
+      <div class="one">
+        <h1 class=" white-text" id="mainHeaderText">Hello, Bat Lover.</h1>
       </div>
-      <div class="col s12 m12">
-        <h4 class="center-align white-text" id="headerSubText">Lets find out when the best time to see the bats is. </h4>
+      <div class="three">
+        <img class="batLogo" src="images/batsATXLogo.png" alt="">
+      </div>
+      <div class="four">
+        <h4 class="center-align white-text" id="headerSubText">Find out when and where to see the fameous bats in Austin, TX </h4>
+      </div>
+      <div class="six ">
+        <a class="waves-effect waves-light btn introButton z-depth-5" href="#signup">Join</a>
+      </div>
+      <div class="two">
+        <canvas id="canvas1"></canvas>
       </div>
 
-      <div class="col s12 m6 mainButtons center-align push-m2">
-        <a class="waves-effect waves-light btn introButton  center z-depth-5" href="#shop">Shop</a>
-      </div>
-      <div class="col s12 m6 mainButtons center-align pull-m2">
-        <a class="waves-effect waves-light btn  introButton  center z-depth-5" href="../signup.html">Join</a>
-      </div>
     </div>
-  </div>
 
-  <div class="container weatherBox section scrollspy orange" id="weather">
-    <div class=" white z-depth-5 weatherSubBox">
+
+
+  <div class="container section scrollspy orange z-depth-5" id="weather">
+    <div class="z-depth-5 weatherSubBox">
       <h3 class="center" id="weatherHeader">Todays Estimated Flight Time</h3>
       <p class="center" id="todaysFlight">calculated flight time here</p>
+
+  <div class="container  weatherBox section scrollspy orange" id="weather">
+    <div class="orange z-depth-5 weatherSubBox">
+      <h3 class="center orange" id="weatherHeader">Forecast</h3>
+      <p class="center" id="todaysFlight">Forecast for the next three days</p>
+
       <h5 class="center">Weather</h5>
       <div class="weatherTable">
-        <table class="centered">
+        <table class="centered black-text">
           <thead>
             <tr>
               <th>Today</th>
@@ -67,7 +77,7 @@
             </tr>
           </thead>
 
-          <tbody>
+          <tbody id="tempBody">
             <tr>
               <td id="todayInfo"></td>
               <td id="tomorrowInfo"></td>
@@ -96,23 +106,28 @@
   </div>
 
   <div class="container z-depth-5 section scrollspy infoContainer" id="about">
-    <h3 class="center">Viewing Information</h3>
+    <h3 class="center white-text">Viewing Information</h3>
     <div class="row">
       <div class="col s12 m6">
         <div class="card-panel teal viewingCards">
-          <h6 class="white-text">Location Information
-          </h6>
+          <h5 class="white-text">Location Information
+          </h5>
           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6892.021786437301!2d-97.75063147440693!3d30.265270827209868!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8644b5064fff0741%3A0xc70811548b9aecff!2sCongress+Avenue+Bridge!5e0!3m2!1sen!2sus!4v1502498894240"
             width="auto" height="auto" frameborder="0" style="border:0" allowfullscreen></iframe>
-            <h6 class="white-text">Parking Information</h6>
-            <p class="white-text center parkingText">Parking Information: We reccomend parking at the Austin American Statesman. Pay for parking using the parking lot app (www.parkmobile.com). Entering parking zone number 2101 to pay for a space.</p>
+            <br>
+            <h5 class="white-text left-align"><strong>Parking Information</strong></h5>
+            <p class="white-text parkingText">Parking Information: We reccomend parking at the Austin American Statesman. Pay for parking using the parking lot app (www.parkmobile.com). Entering parking zone number 2101 to pay for a space.</p>
 </div>
       </div>
       <div class="col s12 m6">
         <div class="card-panel small teal viewingCards">
-        <h6 class="white-text">Parking Information</h6>
-        <p class="white-text center parkingText">Parking Information: We reccomend parking at the Austin American Statesman. Pay for parking using the parking lot app (www.parkmobile.com). Entering parking zone number 2101 to pay for a space.</p>
-</div>
+        <h5 class="white-text">About the Bats</h5>
+        <p class="white-text parkingText">Austin's bridge bats are Mexican free-tailed bats. They migrate each spring from central Mexico to various roosting sites throughout the southwestern U.S. Most of the colony is female, and in early June each one gives birth to a single baby bat, called a pup.</p>
+
+        <h5 class="white-text">Viewing Times</h5>
+        <p class="white-text parkingText">This initial wave flies out right before sunset, and it can take 2-3 hours for all of the bats to come out. We suggest you get there a little early. Use our sunset information to plan ahead. <br><br>The best time of the year to see the bats is during the summer. They wll still fly everynight but by early November they have migrated and won't be back until spring.</p>
+        </div>
+
       </div>
     </div>
   </div>
@@ -126,11 +141,13 @@
 
 
     <div class="container shopContainer section scrollspy valign-wrapper" id="shop">
-      <div class="row">
-        <h3 class="center">SHOP</h3>
-        <div class="shopItems">
-          <div class="col s6 m3">
-            <div class="card z-depth-5 hoverable">
+      <div class="row products2">
+        <div class="col s12 m12">
+        <h3 class="center black-text">Help Us Pay Rent!</h3>
+      </div>
+        <div class="products" id="target">
+          <!-- <div class="col s6 m3">
+            <div class="card z-depth-5 hoverable shopItems">
               <div class="card-image">
                 <img class="shopImage" src="images/shirt.jpg">
               </div>
@@ -192,15 +209,15 @@
 </button>
               </div>
             </div>
-          </div>
-        </div>
+          </div> -->
       </div>
     </div>
+  </div>
 
-    <div class="container instagramContainer teal section scrollspy" id="instagram">
+    <div class="container z-depth-5 instagramContainer teal section scrollspy" id="instagram">
       <div class="row">
         <div class="col s12 m12">
-          <h4 class="center white-text">BATS of Instagram</h4>
+          <h3 class="center white-text">#batsATX of Instagram</h3>
           <div class="carousel">
             <a class="carousel-item" href="#one!"><img src="images/batinsta.jpg"></a>
             <a class="carousel-item" href="#two!"><img src="images/batinsta.jpg"></a>
@@ -208,12 +225,15 @@
             <a class="carousel-item" href="#four!"><img src="images/batinsta.jpg"></a>
             <a class="carousel-item" href="#five!"><img src="images/batinsta.jpg"></a>
           </div>
+          <h5 class="center white-text">Share your phots on Instagram with #batsatx</h5>
         </div>
       </div>
     </div>
-    <div class="card-panel orange donationPannel valign-wrapper">
-      <div class="conservationImage section scrollspy" id="donate">
+    <div class="card-panel z-depth-5 orange donationPannel valign-wrapper">
+
+      <div class="conservationImage center section scrollspy" id="donate">
         <div class="row">
+          <h3 class="white-text">Donate</h3>
           <div class="col s12 m12">
             <img class="responsive-img" id="batOrgImage" src="images/batcharity1.png" alt="donatImage">
           </div>
@@ -264,12 +284,19 @@
 
     <script>
       $(".button-collapse").sideNav();
+
       $(document).ready(function() {
         $('.carousel').carousel();
       });
       $(document).ready(function() {
         $('.scrollspy').scrollSpy();
       });
+      $('.tap-target').tapTarget('open');
+  $('.tap-target').tapTarget('close');
+
+  Snipcart.subscribe('order.completed', function (data) {
+      console.log(data);
+  });
     </script>
 </body>
 
