@@ -9,15 +9,18 @@ h1, h2, h3, h4{
     text-shadow: .5px .5px #000;
   }
 
-
-.weatherTable {
-  background-color: teal;
-}
-
 td {
   background-color: teal;
 }
 
+#subtract {
+  border-radius: 30px;
+  padding: 10px;
+}
+
+.summary {
+  font-weight: 600;
+}
 
 .headerText {
   color: white;
@@ -113,18 +116,19 @@ td {
 }
 
 #weather {
-  height: 600px;
+  height: auto;
   width: auto;
   padding-top: 20px;
 
 }
 
 .weatherSubBox {
-  margin-top: 40px;
+
   margin-left: auto;
   margin-right: auto;
-  width: 90%;
-  height: 500px;
+  margin-bottom: 50px:
+  width: auto;
+  height: auto;
   padding: 20px;
   background-color: #bbdefb;
 }

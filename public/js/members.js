@@ -75,30 +75,45 @@ var cb = '/?callback=?';
 function getLocation() {
   navigator.geolocation.getCurrentPosition(function(data) {
     getWeather(data.coords.latitude, data.coords.longitude);
+
   });
 
 }
+
+// $(document).ready(function() {
+//   var dateString = moment.unix(value).format("MM/DD/YYYY");
+// });
+
+
+
 function getWeather(lat, long) {
   $.getJSON(url + lat + ',' + long + cb)
   .then(function(data) {
-
+// moment().format('MMMM Do YYYY, h:mm:ss a');
+    $(".arriveEarly").html(moment.unix(data.daily.data[0].sunsetTime).subtract(45, 'minutes').format("h:mm a"));
 
     $("#todayInfo").html("Current Temperature: " + data.currently.temperature.toFixed());
-    $("#todayInfo2").html("The Sun sets at: " + data.daily.data[0].sunsetTime.toFixed());
+    $("#todayInfo2").html("The Sun Sets at: " + moment.unix(data.daily.data[0].sunsetTime).format("h:mm a"));
     $("#todayInfo3").html("Wind Speeds expected to reach: " + data.currently.windSpeed.toFixed());
     $("#todayInfo4").html("Current visibility level is: " + data.daily.data[0].visibility.toFixed());
+    $("#todayInfo5").html("Summary: " + data.daily.data[0].summary);
 
 
     $("#tomorrowInfo").html("Current Temperature: " + data.daily.data[1].temperatureMax.toFixed());
-    $("#tomorrowInfo2").html("The Sun sets at: " + data.daily.data[1].sunsetTime.toFixed());
+    $("#tomorrowInfo2").html("The Sun Sets at: " + moment.unix(data.daily.data[1].sunsetTime).format("h:mm a"));
     $("#tomorrowInfo3").html("Wind Speeds expected to reach: " + data.daily.data[1].windSpeed.toFixed());
     $("#tomorrowInfo4").html("Current visibility level is: " + data.daily.data[1].visibility.toFixed());
+    $("#tomorrowInfo5").html("Summary: " + data.daily.data[2].summary);
+
 
     $("#twoDayInfo").html("Current Temperature: " + data.daily.data[2].temperatureMax.toFixed());
-    $("#twoDayInfo2").html("The Sun sets at: " + data.daily.data[2].sunsetTime.toFixed());
+    $("#twoDayInfo2").html("The Sun Sets at: " + moment.unix(data.daily.data[2].sunsetTime).format("h:mm a"));
     $("#twoDayInfo3").html("Wind Speeds expected to reach: " + data.daily.data[2].windSpeed.toFixed());
     $("#twoDayInfo4").html("Current visibility level is: " + data.daily.data[2].visibility.toFixed());
+    $("#twoDayInfo5").html("Summary: " + data.daily.data[2].summary);
+
+    console.log(data);
+
   });
 }
 getLocation();
-
