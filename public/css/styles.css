@@ -127,9 +127,17 @@ body {
 #batOrgImage {
     border-radius: 30px;
   }
+<<<<<<< HEAD
 
   form.signup {
   margin-top: 50px;
+=======
+<<<<<<< HEAD
+  form.signup, form.login {
+  margin-top: 50px;
+=======
+
+>>>>>>> working-branch
 
 /*SHOP CSS*/
 
@@ -158,4 +166,8 @@ body {
 html,body{
   margin: 0;
   padding: 0;
+<<<<<<< HEAD
+=======
+>>>>>>> f636f8446f145d1f8322277073bc8e5a9c17291c
+>>>>>>> working-branch
 }
