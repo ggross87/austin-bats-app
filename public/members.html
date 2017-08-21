@@ -8,7 +8,9 @@
   <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
   <link type="text/css" rel="stylesheet" href="css/styles.css">
   <link href="https://cdn.snipcart.com/themes/2.0/base/snipcart.min.css" rel="stylesheet" type="text/css" />
-<link href="https://fonts.googleapis.com/css?family=Didact+Gothic" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Didact+Gothic" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js" ></script>
+
   <!--Let browser know website is optimized for mobile-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
@@ -46,7 +48,7 @@
         <h4 class="center-align white-text" id="headerSubText">Find out when and where to see the fameous bats in Austin, TX </h4>
       </div>
       <div class="six ">
-        <a class="waves-effect waves-light btn introButton z-depth-5" href="../signup.html">Join</a>
+        <a class="waves-effect waves-light btn introButton z-depth-5" href="#joinTarget">Join</a>
       </div>
       <div class="two">
         <canvas id="canvas1"></canvas>
@@ -54,14 +56,23 @@
 
     </div>
 
-  <div class="container  weatherBox section scrollspy orange" id="weather">
-    <div class="orange z-depth-5 weatherSubBox">
-      <h3 class="center orange" id="weatherHeader">Forecast</h3>
-      <p class="center" id="todaysFlight">Forecast for the next three days</p>
 
-      <h5 class="center">Weather</h5>
-      <div class="weatherTable">
-        <table class="centered black-text">
+    <div class="container weatherBox section scrollspy " id="weather">
+      <div class="z-depth-5 center orange weatherSubBox">
+        <div class="row">
+        <div class="col s12 m12 center">
+        <h3 class="center orange white-text" id="weatherHeader">Forecast</h3>
+        </div>
+        <div class="col s12 m4 push-m4">
+        <div class="teal" id = "subtract">
+          <p class="center white-text" id="todaysFlight">We are not experts, but experts say to arrive at least 45 minutes before sunset. Arive by: <h3 class="arriveEarly center red-text"> </h3></p>
+        </div>
+      </div>
+      <br>
+      <div class="col s12 m12">
+        <h5 class="center white-text">Weather</h5>
+      <div class=" teal weatherTable">
+        <table class="centered white-text">
           <thead>
             <tr>
               <th>Today</th>
@@ -92,10 +103,17 @@
               <td id="tomorrowInfo4"></td>
               <td id="twoDayInfo4"></td>
             </tr>
+            <tr>
+              <td class="summary" id="todayInfo5"></td>
+              <td class="summary" id="tomorrowInfo5"></td>
+              <td class="summary" id="twoDayInfo5"></td>
+            </tr>
           </tbody>
         </table>
       </div>
     </div>
+  </div>
+</div>
   </div>
 
   <div class="container z-depth-5 section scrollspy infoContainer" id="about">
@@ -124,69 +142,13 @@
       </div>
     </div>
   </div>
-
-
-
-
-
-
-
-
-
-    <div class="container shopContainer section scrollspy valign-wrapper" id="shop">
+]    <div class="container shopContainer section scrollspy valign-wrapper" id="shop">
       <div class="row products2">
         <div class="col s12 m12">
-        <h3 class="center black-text">Help Us Pay Rent!</h3>
+        <h3 class="center white-text">Help Us Pay Rent!</h3>
       </div>
         <div class="products" id="target">
-          <!-- <div class="col s6 m3">
-            <div class="card z-depth-5 hoverable shopItems">
-              <div class="card-image">
-                <img class="shopImage" src="images/shirt.jpg">
-              </div>
-              <div class="card-content">
-                <h6>Womens Bat Shirt</h6>
-                <p>Price: $20.00</p>
-              </div>
-              <div class="card-action">
-                <button class="snipcart-add-item" data-item-id="1" data-item-name="Bat Shirt" data-item-price="20.00" data-item-custom2-name="Size" data-item-custom2-options="Small|Medium|Large|XL" data-item-url="http://myapp.com/products/bacon" data-item-description="T-Shirt With Bats On It">
-        Buy
-</button>
-              </div>
-            </div>
-          </div>
-          <div class="col s6 m3">
-            <div class="card z-depth-5 hoverable">
-              <div class="card-image">
-                <img class="shopImage" src="images/shirt.jpg">
-              </div>
-              <div class="card-content">
-                <h6>Womens Bat Shirt</h6>
-                <p>Price: $20.00</p>
-              </div>
-              <div class="card-action">
-                <button class="snipcart-add-item" data-item-id="2" data-item-name="Bat Shirt" data-item-price="20.00" data-item-custom2-name="Size" data-item-custom2-options="Small|Medium|Large" data-item-url="http://myapp.com/products/bacon" data-item-description="T-Shirt With Bats On It">
-        Buy
-</button>
-              </div>
-            </div>
-          </div>
-          <div class="col s6 m3">
-            <div class="card z-depth-5 hoverable">
-              <div class="card-image">
-                <img class="shopImage" src="images/shirt.jpg">
-              </div>
-              <div class="card-content">
-                <h6>Womens Bat Shirt</h6>
-                <p>Price: $20.00</p>
-              </div>
-              <div class="card-action">
-                <button class="snipcart-add-item" data-item-id="3" data-item-name="Bat Shirt" data-item-price="20.00" data-item-custom2-name="Size" data-item-custom2-options="Small|Medium|Large" data-item-url="http://myapp.com/products/bacon" data-item-description="T-Shirt With Bats On It">
-        Buy
-  </button>
-              </div>
-            </div>
-          </div>
+          <!--
           <div class="col s6 m3">
             <div class="card z-depth-5 hoverable">
               <div class="card-image">
@@ -243,13 +205,16 @@
         </div>
       </div>
     </div>
+    <div class="joinBox section scrollspy" id="joinTarget">
+
+    </div>
 
 
     <footer class="page-footer orange">
       <div class="container">
         <div class="row">
           <div class="col l6 s12">
-            <h5 class="white-text">#austinbats</h5>
+            <h5 class="white-text">#batsATX</h5>
             <p class="grey-text text-lighten-4"></p>
           </div>
           <div class="col l4 offset-l2 s12">

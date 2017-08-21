@@ -6,16 +6,25 @@ body {
 
 h1, h2, h3, h4{
   font-family: 'Didact Gothic', sans-serif;
-
-
-.weatherTable {
-  background-color: teal;
-}
+    text-shadow: .5px .5px #000;
+  }
 
 td {
   background-color: teal;
 }
 
+#subtract {
+  border-radius: 30px;
+  padding: 10px;
+}
+
+<<<<<<< HEAD
+=======
+.summary {
+  font-weight: 600;
+}
+
+>>>>>>> a9f448aac429f65b850f129a42dc438c3a306b08
 .headerText {
   color: white;
 }
@@ -128,18 +137,19 @@ td {
 }
 
 #weather {
-  height: 600px;
+  height: auto;
   width: auto;
   padding-top: 20px;
 
 }
 
 .weatherSubBox {
-  margin-top: 40px;
+
   margin-left: auto;
   margin-right: auto;
-  width: 90%;
-  height: 500px;
+  margin-bottom: 50px:
+  width: auto;
+  height: auto;
   padding: 20px;
   background-color: #bbdefb;
 }
@@ -167,12 +177,14 @@ padding-right: 25px;
 padding-top: 25px;
 }
 
-.products2 {
-  background-color: white;
+
+.card-content{
+  height: auto;
 }
 
 .shopItems {
   width: auto;
+  height: auto;
   background-color: lightgrey;
   padding-bottom: 50px;
 }
