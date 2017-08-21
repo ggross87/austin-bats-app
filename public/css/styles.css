@@ -22,6 +22,8 @@ td {
   color: white;
 }
 
+#headerText {
+  text-shadow: .5px .5px #000;
 
 #headerText {
   text-shadow: .5px .5px #000;
@@ -99,6 +101,22 @@ td {
 }
 
 
+.six {
+  grid-column: 3;
+  grid-row: 4;
+  z-index: 1;
+  text-align: center;
+  margin-bottom: 120px;
+}
+
+
+.batLogo {
+  height: 200px;
+  width: auto;
+
+}
+
+
 .introButton {
   width: 150px;
   border-radius: 50px;
@@ -115,7 +133,7 @@ td {
   height: 600px;
   width: auto;
   padding-top: 20px;
-  
+
 }
 
 .weatherSubBox {
@@ -192,17 +210,9 @@ padding-top: 25px;
 #batOrgImage {
     border-radius: 30px;
   }
-<<<<<<< HEAD
 
   form.signup {
   margin-top: 50px;
-=======
-<<<<<<< HEAD
-  form.signup, form.login {
-  margin-top: 50px;
-=======
-
->>>>>>> working-branch
 
 /*SHOP CSS*/
 
@@ -227,8 +237,5 @@ padding-top: 25px;
 html,body{
   margin: 0;
   padding: 0;
-<<<<<<< HEAD
-=======
->>>>>>> f636f8446f145d1f8322277073bc8e5a9c17291c
->>>>>>> working-branch
+
 }
