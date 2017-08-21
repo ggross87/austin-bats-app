@@ -6,8 +6,8 @@ body {
 
 h1, h2, h3, h4{
   font-family: 'Didact Gothic', sans-serif;
-}
-
+    text-shadow: .5px .5px #000;
+  }
 
 td {
   background-color: teal;
@@ -21,8 +21,6 @@ td {
 .summary {
   font-weight: 600;
 }
-
-
 
 .headerText {
   color: white;
@@ -158,12 +156,14 @@ padding-right: 25px;
 padding-top: 25px;
 }
 
-.products2 {
-  background-color: white;
+
+.card-content{
+  height: auto;
 }
 
 .shopItems {
   width: auto;
+  height: auto;
   background-color: lightgrey;
   padding-bottom: 50px;
 }
