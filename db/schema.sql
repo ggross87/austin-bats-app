@@ -1,5 +1,5 @@
 ### Schema
-
+DROP DATABASE IF EXISTS `bat_app`;
 CREATE DATABASE bat_app;
 USE bat_app;
 --

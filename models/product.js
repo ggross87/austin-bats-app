@@ -1,16 +1,26 @@
+module.exports = function(sequelize, DataTypes) {
 
-
-
-  module.exports = function(sequelize, DataTypes) {
-
-  var Product = sequelize.define('Product', {
-    id: {type: 'id', key: true, computed: true, nullable: false},
-    title: {type: DataTypes.STRING},
-    date: {type: DataTypes.STRING},
-    description: {type: DataTypes.STRING},
-    price: {type: 'int'},
-    category: {type: DataTypes.STRING},
-    teaserUrl: {type: DataTypes.STRING}
-  });
-  return Product;
+var product = sequelize.define('Product', {
+  id: {
+    type: DataTypes.INTEGER,
+    primaryKey: true,
+    autoIncrement: true
+  },
+  name: {
+    type: DataTypes.STRING,
+  },
+  price: {
+    type: 'int'
+  },
+  Url: {
+    type: DataTypes.STRING,
+    validate: {
+      isUrl: true
+    }
+  },
+  description: {
+    type: DataTypes.STRING,
+  }
+});
+return Product;
 };

@@ -31,6 +31,13 @@ module.exports = function(app) {
     });
   });
 
+  // app.post("/api/product", function(req, res) {
+  //   console.log(req.body);
+  //   db.Product.create({
+  //
+  //   });
+  // });
+
   // // Route for logging user out
   // app.get("/logout", function(req, res) {
   //   req.logout();
