@@ -125,6 +125,6 @@ $(document).ready(function(){
 
 //SNIPCART JS
 //callback for order copletion that we can pass to a database
-Snipcart.subscribe('order.completed', function (data) {
-    console.log(data);
-});
+// Snipcart.subscribe('order.completed', function (data) {
+//     console.log(data);
+// });
