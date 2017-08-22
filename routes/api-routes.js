@@ -23,7 +23,7 @@ module.exports = function(app) {
       firstname: req.body.firstname,
       lastname: req.body.lastname
     }).then(function() {
-      res.redirect(307, "/api/login");
+      res.redirect(307, "/api/signup");
     }).catch(function(err) {
       console.log(err);
       res.json(err);

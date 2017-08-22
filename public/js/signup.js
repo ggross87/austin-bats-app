@@ -15,13 +15,15 @@ $(document).ready(function() {
     };
 
     if (!userData.email || !userData.firstname) {
-      return;
+      return res.send();
+
     }
     // If we have an email and names, run the signUpUser function
     signUpUser(userData.email, userData.firstname, userData.lastname);
     emailInput.val("");
     firstnameInput.val("");
     lastnameInput.val("");
+
   });
 
   // Does a post to the signup route. If succesful, we are redirected to the members page
@@ -39,6 +41,8 @@ $(document).ready(function() {
 
   function handleLoginErr(err) {
     $("#alert .msg").text(err.responseJSON);
-    $("#alert").fadeIn(500);
+    $("#alert").fadeIn(500, function() {
+      $("#alert").fadeOut(20000)
+    });
   }
 });
