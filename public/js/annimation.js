@@ -3,14 +3,14 @@ var circles = [],
     context = canvas.getContext("2d"),
 
     // SETTINGS
-    opacity = 0.6,                                      // the opacity of the circles 0 to 1
+    opacity = 0.8,                                      // the opacity of the circles 0 to 1
     colors = ['rgba(34, 49, 63,' + opacity + ')',       // an array of rgb colors for the circles
              ],
     minSize = 1,                                        // the minimum size of the circles in px
     maxSize = 2,                                       // the maximum size of the circles in px
     numCircles = 300,                                   // the number of circles
     minSpeed = -2,                                     // the minimum speed, recommended: -maxspeed
-    maxSpeed =3,                                    // the maximum speed of the circles
+    maxSpeed =10,                                    // the maximum speed of the circles
     expandState = true;                                      // the direction of expansion
 
 function buildArray() {
@@ -120,18 +120,20 @@ function animate() {
 }
 window.onload = function () {
     'use strict';
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
+    canvas.width = 1400;
+    canvas.height = 760;
     buildArray();
     animate();
 };
 
 
-window.onresize = function () {
-    'use strict';
-    console.log("resize");
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-    //buildArray();
-    animate();
-};
+// window.onresize = function () {
+//     'use strict';
+//     console.log("resize");
+//     // canvas.width = 2000;
+//     // canvas.height = 2000;
+//     canvas.width = window.innerWidth;
+//     canvas.height = window.innerHeight;
+//     buildArray();
+//     animate();
+// };

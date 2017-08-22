@@ -31,17 +31,17 @@ function createProductCard(productPrice, productName, productDescription) {
 function renderCard (productId, productName, productPrice, productUrl, productDescription){
   return $("<div>").addClass("col s6 m3").append($("<div>").addClass("card medium z-depth-5 hoverable shopItems").append(
     $("<div>").addClass("card-image").append(
-      $("<img>").addClass("shopImage").attr("src", productUrl)
+      $("<img>").addClass("shopImage materialboxed").attr("src", productUrl)
     ),
     createProductCard("$"+ productPrice, productName, productDescription, productUrl),
     $("<div>").addClass("card-action").append(itemInformation(productId, productName, productPrice, productUrl, productDescription))
   ));
 }
 
-$("#target").append(renderCard('1','Bat ATX Logo Shirt', '15.99', 'https://d1yg28hrivmbqm.cloudfront.net/files/f18/f183380cdb508d64068063a3d2434704_preview.png', 'its a shirt, buy it you dummy'));
-$("#target").append(renderCard('2','Love Bats Shirt', '15.99', 'https://d1yg28hrivmbqm.cloudfront.net/files/d89/d8949b51a42e63c87e93c1b99d394da7_preview.png', 'its a shirt, buy it you dummy'));
-$("#target").append(renderCard('3','Guano Shirt', '15.99', 'https://d1yg28hrivmbqm.cloudfront.net/files/2bb/2bbb2c4f36d74d860c0d9a625905b8f2_preview.png', 'its a shirt, buy it you dummy'));
-$("#target").append(renderCard('4','Skyline Shirt', '15.99', 'https://d1yg28hrivmbqm.cloudfront.net/files/3c4/3c4bf120f0983df15b1570b313800425_preview.png', 'its a shirt, buy it you dummy'));
+$("#target").append(renderCard('1','Bat ATX Logo Shirt', '24.99', 'https://d1yg28hrivmbqm.cloudfront.net/files/f18/f183380cdb508d64068063a3d2434704_preview.png', 'its a shirt, buy it you dummy'));
+$("#target").append(renderCard('2','Love Bats Shirt', '24.99', 'https://d1yg28hrivmbqm.cloudfront.net/files/d89/d8949b51a42e63c87e93c1b99d394da7_preview.png', 'its a shirt, buy it you dummy'));
+$("#target").append(renderCard('3','Guano Shirt', '24.99', 'https://d1yg28hrivmbqm.cloudfront.net/files/2bb/2bbb2c4f36d74d860c0d9a625905b8f2_preview.png', 'its a shirt, buy it you dummy'));
+$("#target").append(renderCard('4','Skyline Shirt', '24.99', 'https://d1yg28hrivmbqm.cloudfront.net/files/3c4/3c4bf120f0983df15b1570b313800425_preview.png', 'its a shirt, buy it you dummy'));
 
 //ajax call to the database to pull iteminformation
 
@@ -90,26 +90,26 @@ function getWeather(lat, long) {
   $.getJSON(url + lat + ',' + long + cb)
   .then(function(data) {
 // moment().format('MMMM Do YYYY, h:mm:ss a');
-    $(".arriveEarly").html(moment.unix(data.daily.data[0].sunsetTime).subtract(45, 'minutes').format("h:mm a"));
+    $(".arriveEarly").html("Arive By: " + moment.unix(data.daily.data[0].sunsetTime).subtract(45, 'minutes').format("h:mm a"));
 
     $("#todayInfo").html("Current Temperature: " + data.currently.temperature.toFixed());
     $("#todayInfo2").html("The Sun Sets at: " + moment.unix(data.daily.data[0].sunsetTime).format("h:mm a"));
-    $("#todayInfo3").html("Wind Speeds expected to reach: " + data.currently.windSpeed.toFixed());
-    $("#todayInfo4").html("Current visibility level is: " + data.daily.data[0].visibility.toFixed());
+    $("#todayInfo3").html("Current Wind Speeds: " + data.currently.windSpeed.toFixed()+ "mph");
+    $("#todayInfo4").html("Visibility: " + data.daily.data[0].visibility.toFixed()+ "mi");
     $("#todayInfo5").html("Summary: " + data.daily.data[0].summary);
 
 
-    $("#tomorrowInfo").html("Current Temperature: " + data.daily.data[1].temperatureMax.toFixed());
+    $("#tomorrowInfo").html("Max Temperature: " + data.daily.data[1].temperatureMax.toFixed());
     $("#tomorrowInfo2").html("The Sun Sets at: " + moment.unix(data.daily.data[1].sunsetTime).format("h:mm a"));
-    $("#tomorrowInfo3").html("Wind Speeds expected to reach: " + data.daily.data[1].windSpeed.toFixed());
-    $("#tomorrowInfo4").html("Current visibility level is: " + data.daily.data[1].visibility.toFixed());
+    $("#tomorrowInfo3").html("Wind Speeds expected to reach: " + data.daily.data[1].windSpeed.toFixed() + "mph");
+    $("#tomorrowInfo4").html("Visibility: " + data.daily.data[1].visibility.toFixed()+ "mi");
     $("#tomorrowInfo5").html("Summary: " + data.daily.data[2].summary);
 
 
-    $("#twoDayInfo").html("Current Temperature: " + data.daily.data[2].temperatureMax.toFixed());
+    $("#twoDayInfo").html("Max Temperature: " + data.daily.data[2].temperatureMax.toFixed());
     $("#twoDayInfo2").html("The Sun Sets at: " + moment.unix(data.daily.data[2].sunsetTime).format("h:mm a"));
-    $("#twoDayInfo3").html("Wind Speeds expected to reach: " + data.daily.data[2].windSpeed.toFixed());
-    $("#twoDayInfo4").html("Current visibility level is: " + data.daily.data[2].visibility.toFixed());
+    $("#twoDayInfo3").html("Wind Speeds expected to reach: " + data.daily.data[2].windSpeed.toFixed() + "mph");
+    $("#twoDayInfo4").html("Visibility: " + data.daily.data[2].visibility.toFixed()+ "mi");
     $("#twoDayInfo5").html("Summary: " + data.daily.data[2].summary);
 
     console.log(data);
@@ -117,3 +117,14 @@ function getWeather(lat, long) {
   });
 }
 getLocation();
+
+$(document).ready(function(){
+  $('.materialboxed').materialbox();
+});
+
+
+//SNIPCART JS
+//callback for order copletion that we can pass to a database
+Snipcart.subscribe('order.completed', function (data) {
+    console.log(data);
+});

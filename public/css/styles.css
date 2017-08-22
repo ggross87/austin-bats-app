@@ -35,7 +35,7 @@ td {
 }
 
 #nav-mobile {
-  margin-left: 280px;
+  margin-left: 430px;
   margin-right: auto;
   font-weight: bold;
 }
@@ -98,6 +98,13 @@ td {
 }
 
 
+.batLogo2 {
+  height: 100px;
+  width: auto;
+  margin-left: -20px;
+
+}
+
 .batLogo {
   height: 200px;
   width: auto;
@@ -120,12 +127,10 @@ td {
 #weather {
   height: auto;
   width: auto;
-  padding-top: 20px;
-
+  margin-top: -20px;
 }
 
 .weatherSubBox {
-
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 50px:
@@ -142,7 +147,7 @@ td {
 
 .viewingCards {
   width: auto;
-  height: 400px;
+  min-height: 400px;
 }
 
 .instagramContainer {
@@ -226,4 +231,8 @@ padding-top: 25px;
 html,body{
   margin: 0;
   padding: 0;
+}
+
+.snipcart-overwrite #snipcart-footer #snipcart-powered {
+    display: none;
 }
