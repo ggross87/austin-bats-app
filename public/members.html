@@ -205,7 +205,32 @@
         </div>
       </div>
     </div>
-    <div class="joinBox section scrollspy" id="joinTarget">
+
+    <!--Sign up section capturing data for a newsletter  -->
+    <div class="container white z-depth-5 center section scrollspy joinContainer" id="joinTarget">
+        <div class="row">
+          <h2 class="teal-text">Join Us for Our News letter!</h2>
+          <form class="col s12 m12 signup">
+              <div class="input-field col s12 m12">
+                <label for="exampleInputEmail1">Email address</label>
+                <input type="email" class="form-control" id="email-input" placeholder="Email">
+              </div>
+              <div class="input-field col s6 s6">
+                <label for="firstname">First Name</label>
+                <input type="text" class="form-control" id="name1-input" placeholder="First Name">
+              </div>
+              <div class="input-field col s6">
+                <label for="lastname">Last Name</label>
+                <input type="text" class="form-control" id="name2-input" placeholder="Last Name">
+              </div>
+              <div style="display: none" id="alert" class="alert alert-danger" role="alert">
+                <i class="materials-icon" aria-hidden="true"></i>
+                <span class="sr-only">Error</span> <span class="msg"></span>
+              </div>
+              <button type="submit" class="btn btn-default">Sign Up</button>
+            </form>
+          <!-- </div> -->
+        </div>
 
     </div>
 
@@ -237,12 +262,12 @@
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="js/materialize.min.js"></script>
     <script type="text/javascript" src="js/members.js"></script>
+    <script type="text/javascript" src="js/signup.js"></script>
     <script type="text/javascript" src="js/annimation.js"></script>
     <script src="https://cdn.snipcart.com/scripts/2.0/snipcart.js" id="snipcart" data-api-key="NDdhYTA5NTMtNzkwZi00ZGMyLWJmYjctOTY3NjllZjE5ZWNmNjM2Mzg0Mjc2Nzk2MjgwODI2"></script>
 
     <script>
       $(".button-collapse").sideNav();
-
       $(document).ready(function() {
         $('.carousel').carousel();
       });
@@ -251,7 +276,6 @@
       });
       $('.tap-target').tapTarget('open');
   $('.tap-target').tapTarget('close');
-
   Snipcart.subscribe('order.completed', function (data) {
       console.log(data);
   });

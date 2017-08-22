@@ -6,8 +6,8 @@ body {
 
 h1, h2, h3, h4{
   font-family: 'Didact Gothic', sans-serif;
-    text-shadow: .5px .5px #000;
-  }
+}
+
 
 td {
   background-color: teal;
@@ -18,19 +18,16 @@ td {
   padding: 10px;
 }
 
-<<<<<<< HEAD
-=======
 .summary {
   font-weight: 600;
 }
 
->>>>>>> a9f448aac429f65b850f129a42dc438c3a306b08
+
+
 .headerText {
   color: white;
 }
 
-#headerText {
-  text-shadow: .5px .5px #000;
 
 #headerText {
   text-shadow: .5px .5px #000;
@@ -108,22 +105,6 @@ td {
 }
 
 
-.six {
-  grid-column: 3;
-  grid-row: 4;
-  z-index: 1;
-  text-align: center;
-  margin-bottom: 120px;
-}
-
-
-.batLogo {
-  height: 200px;
-  width: auto;
-
-}
-
-
 .introButton {
   width: 150px;
   border-radius: 50px;
@@ -177,14 +158,12 @@ padding-right: 25px;
 padding-top: 25px;
 }
 
-
-.card-content{
-  height: auto;
+.products2 {
+  background-color: white;
 }
 
 .shopItems {
   width: auto;
-  height: auto;
   background-color: lightgrey;
   padding-bottom: 50px;
 }
@@ -247,5 +226,4 @@ padding-top: 25px;
 html,body{
   margin: 0;
   padding: 0;
-
 }

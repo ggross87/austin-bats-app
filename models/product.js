@@ -1,15 +1,15 @@
 module.exports = function(sequelize, DataTypes) {
 
 var product = sequelize.define('Product', {
-  id: {
+  Id: {
     type: DataTypes.INTEGER,
     primaryKey: true,
     autoIncrement: true
   },
-  name: {
+  Name: {
     type: DataTypes.STRING,
   },
-  price: {
+  Price: {
     type: 'int'
   },
   Url: {
@@ -18,9 +18,12 @@ var product = sequelize.define('Product', {
       isUrl: true
     }
   },
-  description: {
-    type: DataTypes.STRING,
+  Description: {
+    type: DataTypes.TEXT,
   }
 });
-return Product;
+product.create({ Id: '1', Name: 'Shirts', Price: '15.99', Url: 'https://d1yg28hrivmbqm.cloudfront.net/files/3c4/3c4bf120f0983df15b1570b313800425_preview.png', Description: 'its a shirt, buy it you dummy'  }).then(function(product) {
+  product.save();
+});
+return product;
 };

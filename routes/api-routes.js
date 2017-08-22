@@ -31,12 +31,18 @@ module.exports = function(app) {
     });
   });
 
-  // app.post("/api/product", function(req, res) {
-  //   console.log(req.body);
-  //   db.Product.create({
-  //
-  //   });
-  // });
+  app.get("/api/product", function(req, res) {
+    console.log(req.body);
+    db.product.create({
+      Id: req.body.Id,
+      Name: req.body.Name,
+      Price: req.body.Price,
+      Url: req.body.Url,
+      Description: req.body.Description
+    }).then(function(results) {
+      res.end();
+    });
+  });
 
   // // Route for logging user out
   // app.get("/logout", function(req, res) {

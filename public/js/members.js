@@ -45,23 +45,23 @@ $("#target").append(renderCard('4','Skyline Shirt', '15.99', 'https://d1yg28hriv
 
 //ajax call to the database to pull iteminformation
 
-// $.ajax({url: '/whereever', method: 'get'}).done(function(data) {
+// $.ajax({url: '/members', method: 'get'}).done(function(data) {
 //   data.map(function(eachOne) {
-//     var productId = eachOne.productId;
-//     var productName = eachOne.productName;
-//     var productPrice = eachOne.productPrice;
-//     var productUrl = eachOne.productUrl;
-//     var productDescription = eachOne.productDescription;
-//     $("#target").append(renderCard(productId, productName, productPrice, productUrl, productDescription));
+//     var productId = eachOne.Id;
+//     var productName = eachOne.Name;
+//     var productPrice = eachOne.Price;
+//     var productUrl = eachOne.Url;
+//     var productDescription = eachOne.Description;
+//     $("#target").prepend(renderCard(productId, productName, productPrice, productUrl, productDescription));
+
+
+
+
+// $(document).ready(function() {
+//   $.get("/api/user_data").then(function(data) {
+//     $(".member-name").text(data.email);
 //   });
 // });
-
-
-$(document).ready(function() {
-  $.get("/api/user_data").then(function(data) {
-    $(".member-name").text(data.email);
-  });
-});
 // var temp2;
 // var fah;
 // var cloudy;
