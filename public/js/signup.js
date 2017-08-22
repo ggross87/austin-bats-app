@@ -15,7 +15,7 @@ $(document).ready(function() {
     };
 
     if (!userData.email || !userData.firstname) {
-      return res.send();
+      return;
 
     }
     // If we have an email and names, run the signUpUser function
@@ -42,7 +42,7 @@ $(document).ready(function() {
   function handleLoginErr(err) {
     $("#alert .msg").text(err.responseJSON);
     $("#alert").fadeIn(500, function() {
-      $("#alert").fadeOut(20000)
+      $("#alert").fadeOut(20000);
     });
   }
 });

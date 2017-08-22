@@ -4,7 +4,6 @@
   "description": "Austin bats app",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
   "repository": {
@@ -23,13 +22,11 @@
     "body-parser": "^1.17.2",
     "express": "^4.15.4",
     "express-session": "^1.15.5",
-    "mysql2": "^1.4.0",
+    "moment": "^2.18.1",
+    "mysql2": "^1.4.1",
     "passport": "^0.4.0",
     "passport-local": "^1.0.0",
     "path": "^0.12.7",
-    "sequelize": "^4.4.3"
-  },
-  "scripts": {
-    "start": "node server.js"
+    "sequelize": "^4.6.0"
   }
 }
